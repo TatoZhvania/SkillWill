@@ -1,9 +1,19 @@
 // პ  ი  რ  ვ  ე  ლ  ი
 const button = document.getElementById("hider");
 const text = document.getElementById("text");
+let isHidden = false;
+
 
 button.addEventListener("click", function() {
-	text.style.display = "none";
+	if (isHidden) {
+		text.style.display = "block";
+		button.value = "Click to hide the text";
+		isHidden = false;
+	} else {
+		text.style.display = "none";
+		button.value = "Show the text";
+		isHidden = true;
+	}
 });
 
 
